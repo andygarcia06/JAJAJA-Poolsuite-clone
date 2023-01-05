@@ -1,0 +1,109 @@
+$theme-colors: (
+    "primary": #e63329,
+    "secondary": #fafbf8
+);
+
+@font-face {
+    font-family: "JAJAJA";
+    src: url("../../public/fonts/JAJAJA.ttf"); }
+  
+@font-face {
+    font-family: "Pragmatica";
+    src: url("../../public/fonts/Pragmatica-ExtraLight.ttf"); }
+
+// GENERAL 
+
+main{
+    background-color: #e63329;
+}
+
+.changing-color-txt{
+    font-weight: bold;
+    font-family: 'JAJAJA';
+    font-size: 120px;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'JAJAJA';
+}
+
+nav{
+    font-family: 'JAJAJA';
+    letter-spacing: 1px;
+}
+
+// JAJAJA MODAL
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 85vh;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .wrapper header{
+    font-size: 23px;
+    font-weight: 500;
+    padding: 17px 30px;
+    border-bottom: 1px solid #ccc;
+  }
+  .wrapper header.active{
+    cursor: move;
+    user-select: none;
+  }
+  .wrapper .content{
+    display: flex;
+    padding: 30px 30px 40px 30px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content .icon{
+    // height: 195px;
+    width: 100%;
+    margin: 2vh 0;
+    // border-radius: 50%;
+    // border: 5px solid #6F36FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content .icon i{
+    color: #6F36FF;
+    font-size: 60px;
+  }
+  .content .title{
+    margin: 15px 0;
+    font-size: 29px;
+    font-weight: 500;
+  }
+  .content p{
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .close-btn{
+    position: relative;
+    left: 99%;
+  }
+
+
+// JAJAJA MAIN 
+
+main{
+    height: 95vh;
+}
+
+.jajaja-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90vh
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
