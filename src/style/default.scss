@@ -13,15 +13,25 @@ $theme-colors: (
 
 // GENERAL 
 
+body{
+    overflow: hidden;
+}
+
 main{
     background-color: #e63329;
+    animation: wheelBackgroundColor 10s infinite;
 }
 
 .changing-color-txt{
+    color: black;
+    animation: wheelTextColor 10s infinite;
+    -webkit-text-stroke: 1px #fff;
+    letter-spacing: 2px;
+    font-size: 120px;
     font-weight: bold;
     font-family: 'JAJAJA';
-    font-size: 120px;
 }
+
 
 h1,h2,h3,h4,h5{
     font-family: 'JAJAJA';
@@ -30,6 +40,20 @@ h1,h2,h3,h4,h5{
 nav{
     font-family: 'JAJAJA';
     letter-spacing: 1px;
+}
+
+.changing-nav-color-txt{
+    animation: wheelTxtNavColor 10s infinite;
+}
+
+.nav-changing-background-color{
+    animation: wheelBackgroundNavColor 10s infinite;
+}
+
+.arrow-down{
+    animation: wheelTextColor 10s infinite;
+    font-weight: 900;
+    font-size: 130%;
 }
 
 // JAJAJA MODAL
@@ -102,8 +126,46 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 90vh
+    height: 90vh;
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// KEYFRAME
+
+@keyframes wheelBackgroundColor {
+    from, to { background-color: rgb(164, 20, 12); }
+    10%      { background-color: rgb(255, 224, 0); }
+    30%      { background-color: rgb(232, 78, 27); }
+    50%      { background-color: rgb(235, 170, 201); }
+    70%      { background-color: rgb(183, 222, 247); }
+    90%     { background-color: rgb(247, 158, 11); }
+}
+
+@keyframes wheelTextColor {
+    from, to { color: rgb(243, 244, 236); }
+    10%      { color: rgb(213, 38, 68); }
+    30%      { color: rgb(255, 224, 0); }
+    50%      { color: rgb(183, 222, 247); }
+    70%      { color: rgb(204, 33, 28); }
+    90%     { color: rgb(0, 139, 70); }
+}
+
+@keyframes wheelBackgroundNavColor {
+    from, to { color: rgb(243, 244, 236); }
+    10%      { color: rgb(213, 38, 68); }
+    30%      { color: rgb(255, 224, 0); }
+    50%      { color: rgb(183, 222, 247); }
+    70%      { color: rgb(204, 33, 28); }
+    90%     { color: rgb(0, 139, 70); }
+}
+
+@keyframes wheelTxtNavColor {
+    from, to { color: rgb(164, 20, 12); }
+    10%      { color: rgb(255, 224, 0); }
+    30%      { color: rgb(232, 78, 27); }
+    50%      { color: rgb(235, 170, 201); }
+    70%      { color: rgb(183, 222, 247); }
+    90%     { color: rgb(247, 158, 11); }
+}
 

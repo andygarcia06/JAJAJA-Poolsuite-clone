@@ -4,13 +4,21 @@
 @font-face {
   font-family: "Pragmatica";
   src: url("../../public/fonts/Pragmatica-ExtraLight.ttf"); }
+body {
+  overflow: hidden; }
+
 main {
-  background-color: #e63329; }
+  background-color: #e63329;
+  animation: wheelBackgroundColor 10s infinite; }
 
 .changing-color-txt {
+  color: black;
+  animation: wheelTextColor 10s infinite;
+  -webkit-text-stroke: 1px #fff;
+  letter-spacing: 2px;
+  font-size: 120px;
   font-weight: bold;
-  font-family: 'JAJAJA';
-  font-size: 120px; }
+  font-family: 'JAJAJA'; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: 'JAJAJA'; }
@@ -18,6 +26,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 nav {
   font-family: 'JAJAJA';
   letter-spacing: 1px; }
+
+.changing-nav-color-txt {
+  animation: wheelTxtNavColor 10s infinite; }
+
+.nav-changing-background-color {
+  animation: wheelBackgroundNavColor 10s infinite; }
+
+.arrow-down {
+  animation: wheelTextColor 10s infinite;
+  font-weight: 900;
+  font-size: 130%; }
 
 .wrapper {
   position: absolute;
@@ -9692,5 +9711,57 @@ textarea.form-control-lg {
 
   .d-print-none {
     display: none !important; } }
+@keyframes wheelBackgroundColor {
+  from, to {
+    background-color: #a4140c; }
+  10% {
+    background-color: #ffe000; }
+  30% {
+    background-color: #e84e1b; }
+  50% {
+    background-color: #ebaac9; }
+  70% {
+    background-color: #b7def7; }
+  90% {
+    background-color: #f79e0b; } }
+@keyframes wheelTextColor {
+  from, to {
+    color: #f3f4ec; }
+  10% {
+    color: #d52644; }
+  30% {
+    color: #ffe000; }
+  50% {
+    color: #b7def7; }
+  70% {
+    color: #cc211c; }
+  90% {
+    color: #008b46; } }
+@keyframes wheelBackgroundNavColor {
+  from, to {
+    color: #f3f4ec; }
+  10% {
+    color: #d52644; }
+  30% {
+    color: #ffe000; }
+  50% {
+    color: #b7def7; }
+  70% {
+    color: #cc211c; }
+  90% {
+    color: #008b46; } }
+@keyframes wheelTxtNavColor {
+  from, to {
+    color: #a4140c; }
+  10% {
+    color: #ffe000; }
+  30% {
+    color: #e84e1b; }
+  50% {
+    color: #ebaac9; }
+  70% {
+    color: #b7def7; }
+  90% {
+    color: #f79e0b; } }
 
 /*# sourceMappingURL=default.css.map */

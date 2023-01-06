@@ -18,3 +18,18 @@ document.addEventListener("mouseup", ()=>{
 
 
 // MODAL
+
+let closeModalBtn = document.querySelector('.close-btn');
+let openModalBtn = document.querySelector('.open-modal-btn');
+let modal = document.querySelector('.wrapper');
+
+function openModal() {
+    modal.style.visibility = 'visible';
+};
+
+function closeModal() {
+    modal.style.visibility = 'hidden';
+};
+
+openModalBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click',closeModal);
